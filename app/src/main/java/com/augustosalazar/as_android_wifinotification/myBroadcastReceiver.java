@@ -59,8 +59,8 @@ public class myBroadcastReceiver extends BroadcastReceiver {
                 //get the different network states
                 if (networkInfo.getState() == NetworkInfo.State.CONNECTED) {
                     Log.d(TAG, "Type is wifi amd conneced");
-                    context.stopService(new Intent(context, MyService.class));
-                    Intent serviceIntent = new Intent(context, MyService.class);
+                    context.stopService(new Intent(context, UploadService.class));
+                    Intent serviceIntent = new Intent(context, UploadService.class);
                     context.startService(serviceIntent);
                 }
             }

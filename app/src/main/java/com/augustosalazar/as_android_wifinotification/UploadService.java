@@ -18,16 +18,15 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class MyService extends Service {
+public class UploadService extends Service {
 
     private static final String TAG = "WifiNotification";
-    private FileUploadTask task;
     private Context mContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        Log.d(TAG, "MyService onCreate");
+        Log.d(TAG, "UploadService onCreate");
         mContext = this;
         new doUpload().execute();
 
